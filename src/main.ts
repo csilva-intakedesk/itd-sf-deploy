@@ -21,10 +21,16 @@ export async function run(): Promise<void> {
     const TIMEOUT = core.getInput('TIMEOUT', { required: true })
     core.info(`TIMEOUT, ${TIMEOUT}!`)
 
-    const MANIFEST_SOURCE_DIRECTORY = core.getInput('MANIFEST_SOURCE_DIRECTORY', { required: true })
+    const MANIFEST_SOURCE_DIRECTORY = core.getInput(
+      'MANIFEST_SOURCE_DIRECTORY',
+      { required: true }
+    )
     core.info(`MANIFEST_SOURCE_DIRECTORY, ${MANIFEST_SOURCE_DIRECTORY}!`)
 
-    const MANIFEST_OUTPUT_DIRECTORY = core.getInput('MANIFEST_OUTPUT_DIRECTORY', { required: true })
+    const MANIFEST_OUTPUT_DIRECTORY = core.getInput(
+      'MANIFEST_OUTPUT_DIRECTORY',
+      { required: true }
+    )
     core.info(`MANIFEST_OUTPUT_DIRECTORY, ${MANIFEST_OUTPUT_DIRECTORY}!`)
 
     // Log the current timestamp, wait, then log the new timestamp
