@@ -24958,20 +24958,20 @@ const wait_1 = __nccwpck_require__(5259);
  */
 async function run() {
     try {
-        const ms = core.getInput('milliseconds');
+        const ms = '1000';
         // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
         core.debug(`Waiting ${ms} milliseconds ...`);
         // variables
         const DRY_RUN = core.getInput('DRY_RUN', { required: true });
-        core.info(`DRY_RUN, ${DRY_RUN}!`);
+        console.log(`DRY_RUN, ${DRY_RUN}!`);
         const TEST_LEVEL = core.getInput('TEST_LEVEL', { required: true });
-        core.info(`TEST_LEVEL, ${TEST_LEVEL}!`);
+        console.log(`TEST_LEVEL, ${TEST_LEVEL}!`);
         const TIMEOUT = core.getInput('TIMEOUT', { required: true });
-        core.info(`TIMEOUT, ${TIMEOUT}!`);
+        console.log(`TIMEOUT, ${TIMEOUT}!`);
         const MANIFEST_SOURCE_DIRECTORY = core.getInput('MANIFEST_SOURCE_DIRECTORY', { required: true });
-        core.info(`MANIFEST_SOURCE_DIRECTORY, ${MANIFEST_SOURCE_DIRECTORY}!`);
+        console.log(`MANIFEST_SOURCE_DIRECTORY, ${MANIFEST_SOURCE_DIRECTORY}!`);
         const MANIFEST_OUTPUT_DIRECTORY = core.getInput('MANIFEST_OUTPUT_DIRECTORY', { required: true });
-        core.info(`MANIFEST_OUTPUT_DIRECTORY, ${MANIFEST_OUTPUT_DIRECTORY}!`);
+        console.log(`MANIFEST_OUTPUT_DIRECTORY, ${MANIFEST_OUTPUT_DIRECTORY}!`);
         // Log the current timestamp, wait, then log the new timestamp
         core.debug(new Date().toTimeString());
         await (0, wait_1.wait)(parseInt(ms, 10));
